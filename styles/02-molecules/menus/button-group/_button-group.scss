@@ -1,0 +1,22 @@
+.button-group-menu {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  text-align: center;
+
+  a {
+    @include button-base;
+    @include button-color-primary;
+    @include button-medium;
+
+    margin: 0 1rem 1rem 0;
+    padding: $space $space-double $space-one-half $space-double;
+    line-height: 1.2;
+  }
+
+  @include medium {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,191 @@
+/*
+ * General Mixins (put specific ones in component files where applicable)
+*/
+
+/* Mixin - Clearfix.
+ * Adds clearfix based on http://bourbon.io/docs/#clearfix
+ * use example =   @include cleafix
+*/
+
+@mixin body-copy {
+  font-family: $font-body;
+  font-size: $font-body-size;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+$outer-container-break: $small;
+
+/*
+ * Use this on the outer wrapper of page-level elements.
+ * It ensures consistent spacing between elements on the page.
+ */
+@mixin space-stack-page {
+  margin-bottom: $space-double;
+}
+
+/// Mixin - Wrapper
+/// Outer container mixin for large screens
+@mixin wrapper(
+  $container-max-width: $max-width,
+  $outer-container-break: $small,
+  $v-margin: 0,
+  $v-padding: 0,
+  $h-padding: $space,
+  $h-padding-large: $h-padding
+) {
+  max-width: #{$container-max-width};
+  width: 100%;
+  margin: #{$v-margin} auto;
+  padding: #{$v-padding} #{$h-padding};
+
+  @include breakpoint($outer-container-break) {
+    padding: #{$v-padding} #{$h-padding-large};
+  }
+
+  @include breakpoint($container-max-width) {
+    padding-left: calc(
+      #{$h-padding-large} + calc(-50vw + calc(#{$container-max-width} / 2))
+    );
+    padding-right: calc(
+      #{$h-padding-large} + calc(-50vw + calc(#{$container-max-width} / 2))
+    );
+  }
+}
+
+// Mixin - Standard Margin
+@mixin margin {
+  margin-bottom: $space;
+}
+
+@mixin no-bottom {
+  margin-bottom: 0;
+}
+
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Mixin - Flexgrid mixins
+@mixin column-properties($i, $columns, $gutter) {
+  @include margin;
+
+  box-sizing: border-box;
+  padding-left: rem($gutter);
+  padding-right: rem($gutter);
+  width: col-width($i, $columns);
+}
+
+@mixin columns-loop($name, $columns, $gutter) {
+  @for $i from 0 through $columns {  /* stylelint-disable-line */
+    &-#{$name}-#{$i} {
+      @include column-properties($i, $columns, $gutter);
+    }
+    &-#{$name}-shift-#{$i} {
+      margin-left: col-width($i, $columns);
+    }
+  }
+}
+
+@mixin grid-base($width) {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include small {
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    width: $width;
+  }
+}
+
+// Mixin - Grid Layout framework
+//
+// Usage:
+// .grid-container {
+//     @include grid-layout(12, 2rem); // The $row-gap will automagically be the same as $col-gap if you leave it empty
+// }
+//
+// .grid-item {
+//     @include grid-col-start(2);
+//     @include grid-col-span(4);
+//     @include grid-row-start(1);
+// }
+
+@mixin grid-layout($col-count, $col-gap: 3.125rem, $row-gap: null) {
+  $row-gap: if($row-gap == null, $col-gap, $row-gap);
+
+  display: grid;
+  grid-template-columns: repeat($col-count, 1fr);
+  grid-gap: $row-gap $col-gap;
+  gap: $row-gap $col-gap;
+}
+
+@mixin grid-col-start($number) {
+  grid-column-start: $number;
+}
+
+@mixin grid-row-start($number) {
+  grid-row-start: $number;
+}
+
+@mixin grid-col-span($count) {
+  grid-column-end: span $count;
+}
+
+@mixin grid-row-span($count) {
+  grid-row-end: span $count;
+}
+
+@mixin focus {
+  outline: 2px solid clr(tone-9-opacity-15);
+  outline-offset: 2px;
+}
+
+@mixin visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+@mixin nested-flexgrid {
+  width: calc(100% + $col-gap);
+  margin-left: calc($col-gap/2 * -1);
+  margin-right: calc($col-gap/2 * -1);
+}
+
+@mixin flexgrid {
+  @include grid-base($xxl-grid-width);
+
+  width: calc(100% - ($grid-sm-margin * 2));
+
+  @media screen and (min-width: $grid-md-breakpoint) {
+    width: calc(100% - ($grid-md-margin * 2));
+  }
+
+  @media screen and (min-width: $grid-l-breakpoint) {
+    width: calc(100% - ($grid-l-margin * 2));
+  }
+
+  @media screen and (min-width: $grid-xl-breakpoint) {
+    width: calc(100% - ($grid-xl-margin * 2));
+  }
+
+  @media screen and (min-width: $grid-xxl-breakpoint) {
+    width: calc(100% - ($grid-xxl-margin * 2));
+  }
+}

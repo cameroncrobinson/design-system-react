@@ -1,0 +1,49 @@
+// Convert values into rem units. Only `px` values are converted to rem.
+//
+// Options:
+// • $unit-values(value = number or variable) - Unit values. Can be single, mix, or group of 3 or 4.
+// • $base-size(value = number or variable, default = $default-size) - Set unit base, or defaults to defined value in settings.
+//
+// Usage:
+// • Use with single or multiple units
+//   font-size: rem(20px);
+//   padding: rem(20px 50px);
+// • Use with a base unit size
+//   font-size: rem(20px, 10px);
+
+@function rem($unit-value, $base-size: $default-size) {
+  // Check to see if value is 0, auto, or inherited
+  // If so, do nothing and output value
+  @if $unit-value == 0 or $unit-value == auto or $unit-value == inherit {
+    @return $unit-value;
+  }
+  // If the value is a pixel, convert to rem value
+  @else if unit($unit-value) == 'px' {
+    @return calc($unit-value / $base-size) + 0rem;  /* stylelint-disable-line */
+  }
+
+  // If the value is unitless, assume it is a px value and convert to rem value
+  @else if unitless($unit-value) {
+    @return ($unit-value / strip-unit($base-size)) + 0rem;  /* stylelint-disable-line */
+  }
+  // For everything else, keep as is
+  @else {
+    @return $unit-value;
+  }
+}
+
+@function rem-multiple($unit-values, $base-size: $default-size) {
+  // Create an empty list that we can dump values into
+  $rem-values: ();
+
+  @each $value in $unit-values {
+    $rem-values: append($rem-values, rem($value, $base-size));
+  }
+
+  @return $rem-values;
+}
+
+// Flexgrid functions
+@function col-width($i, $columns) {
+  @return calc(100% / $columns) * $i;
+}

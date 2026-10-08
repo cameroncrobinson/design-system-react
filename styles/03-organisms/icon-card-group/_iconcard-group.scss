@@ -1,0 +1,39 @@
+.icon_card_group {
+  &.flexgrid {
+    flex-direction: row;
+
+    a {
+      max-width: 31.25rem;
+    }
+  }
+
+  .icon-card {
+    margin-bottom: $space-m;
+  }
+}
+
+.main,
+.main--with-sidebar {
+  .section--primary-4.section__icon-group {
+    padding: $space-m;
+
+    .paragraph-content {
+      margin-bottom: 0;
+
+      .icon-card:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    @include medium {
+      padding: $space-m-desktop $space-m-desktop calc($space-m-desktop - 30px)
+        $space-m-desktop;
+
+      .paragraph-content {
+        .icon-card:last-of-type {
+          margin-bottom: 1.875rem;
+        }
+      }
+    }
+  }
+}

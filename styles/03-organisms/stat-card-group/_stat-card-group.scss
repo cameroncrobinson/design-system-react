@@ -1,0 +1,9 @@
+.stat-card-group {
+  &.flexgrid-nm {
+    padding: 0;
+  }
+
+  @include medium {
+    @include nested-flexgrid;
+  }
+}

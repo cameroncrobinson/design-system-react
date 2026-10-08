@@ -1,0 +1,116 @@
+.book-river {
+  display: flex;
+  padding-bottom: $space-s-desktop;
+  overflow: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+
+  @include large {
+    padding-bottom: 0;
+  }
+
+  .book:first-of-type {
+    padding-left: $grid-sm-margin;
+
+    @include medium {
+      padding-left: $grid-md-margin;
+    }
+
+    @include large {
+      padding-left: 0;
+    }
+  }
+
+  .book:last-of-type {
+    padding-right: $grid-sm-margin;
+
+    @include medium {
+      padding-right: $grid-md-margin;
+    }
+
+    @include large {
+      padding-right: 0;
+    }
+  }
+}
+
+.button-container {
+  width: 100%;
+
+  .scroll-button {
+    background-color: clr('lighter');
+    border: 0;
+    border-radius: 50%;
+    display: block;
+    float: right;
+    padding: 8px 10px;
+    -webkit-appearance: none;
+
+    @include large {
+      display: none;
+    }
+
+    &:hover {
+      background-color: clr(primary-2);
+      color: clr(tone-1);
+      cursor: pointer;
+    }
+
+    &.hidden {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s 0.5s, opacity 0.5s linear;
+    }
+  }
+}
+
+.section {
+  &--with-background {
+    .button-container {
+      margin-bottom: $space-m;
+
+      @include large {
+        margin-bottom: $space-m-desktop;
+      }
+    }
+
+    &.section--custom-flexgrid {
+      @include large {
+        padding: $space-l $grid-l-margin;
+      }
+
+      @include xl {
+        padding: $space-l-desktop $grid-xl-margin;
+      }
+
+      @include xxl {
+        padding: $space-l-desktop $grid-xxl-margin;
+      }
+    }
+  }
+
+  &--custom-flexgrid {
+    > .flexgrid-nm {
+      padding: 0;
+    }
+
+    .section__header,
+    .button-container {
+      padding: 0 $grid-sm-margin;
+
+      @include medium {
+        padding: 0 $grid-md-margin;
+      }
+
+      @include large {
+        padding: 0;
+      }
+    }
+  }
+
+  &--custom-flexgrid.section--no-bg {
+    @include large {
+      @include flexgrid;
+    }
+  }
+}

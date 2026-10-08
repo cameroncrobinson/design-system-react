@@ -1,0 +1,60 @@
+.sidebar-menu {
+  @include list-reset;
+
+  max-width: 400px;
+  width: 100%;
+
+  &__link {
+    @include heading-medium;
+
+    display: block;
+    width: 100%;
+    border-bottom: solid 2px clr(tone-9);
+    text-decoration: none;
+    margin-bottom: 0;
+    padding-bottom: $space-one-half;
+  }
+
+  .sub-menu {
+    @include list-reset;
+
+    background-color: clr(primary-4);
+
+    &__link.is-active {
+      color: clr(primary-1);
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: unset;
+      }
+    }
+
+    &__item--sub-1 {
+      border-bottom: solid 2px #fff;
+
+      .sub-menu--sub {
+        font-size: 1rem;
+        margin-left: $space;
+        padding-bottom: 0.5rem;
+      }
+    }
+
+    a {
+      color: #000;
+      display: block;
+      text-decoration: none;
+      width: 100%;
+      padding: $space-one-half;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+
+      &.is--active {
+        color: clr(primary-1);
+        font-weight: 600;
+      }
+    }
+  }
+}

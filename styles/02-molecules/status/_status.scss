@@ -1,0 +1,43 @@
+.status__list {
+  @include list-reset;
+
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.status {
+  display: block;
+  margin-bottom: $space-s;
+  padding: 1rem $space-s;
+  text-align: left;
+
+  @include medium {
+    padding: 1rem $space-s-desktop;
+  }
+
+  &--warning {
+    border-top: solid 2px clr(warning);
+    color: clr(tone-9);
+    background-color: rgba($warning, 0.1);
+  }
+
+  &--error {
+    border-top: solid 2px clr(error);
+    color: clr(tone-9);
+    background-color: rgba($error, 0.1);
+  }
+
+  &--status {
+    border-top: solid 2px clr(success);
+    color: clr(tone-9);
+    background-color: rgba($success, 0.1);
+  }
+
+  a {
+    color: clr(tone-9);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+@use 'colors-vars';
+
+// Color Usage variables - use these (via the `clr` function below)
+// rather than color variables directly.
+$defaultColors: (
+  // Primary colors
+  primary-1: colors-vars.$blue,
+  primary-2: colors-vars.$blue-dark,
+  primary-3: colors-vars.$blue-light,
+  primary-4: colors-vars.$blue-extra-light,
+  // Secondary colors
+  // secondary-1
+  // secondary-2
+  // Tertiary colors
+  // tertiary-1
+  // tertiary-2
+  // Accent Colors
+  accent-1: colors-vars.$red,
+  // Tone colors
+  tone-1: colors-vars.$tone-1,
+  tone-2: colors-vars.$tone-2,
+  tone-3: colors-vars.$tone-3,
+  tone-4: colors-vars.$tone-4,
+  tone-5: colors-vars.$tone-5,
+  tone-6: colors-vars.$tone-6,
+  tone-7: colors-vars.$tone-7,
+  tone-8: colors-vars.$tone-8,
+  tone-9: colors-vars.$tone-9,
+  // Opacity variation.  Can be made for any color option in the palette,
+  tone-9-opacity-60: rgba(colors-vars.$tone-9, 0.6),
+  tone-9-opacity-15: rgba(colors-vars.$tone-9, 0.15),
+  tone-9-opacity-06: rgba(colors-vars.$tone-9, 0.06),
+  // Action colors
+  warning: colors-vars.$warning,
+  error: colors-vars.$error,
+  success: colors-vars.$success,
+  // Obsolete - fall back only, do not use in new development.
+  primary: colors-vars.$blue,
+  accent: colors-vars.$red,
+  lightest: colors-vars.$white,
+  lighter: colors-vars.$gray-6,
+  light: colors-vars.$gray-15,
+  darker: colors-vars.$gray-60,
+  darkest: colors-vars.$black
+);
+
+$darkColors: (
+  // Primary colors
+  primary-1: colors-vars.$blue,
+  primary-2: colors-vars.$blue-dark,
+  primary-3: colors-vars.$blue-light,
+  primary-4: colors-vars.$blue-extra-light,
+  // Secondary colors
+  // secondary-1
+  // secondary-2
+  // Tertiary colors
+  // tertiary-1
+  // tertiary-2
+  // Accent Colors
+  accent-1: colors-vars.$red,
+  // Tone colors
+  tone-1: colors-vars.$tone-1,
+  tone-2: colors-vars.$tone-2,
+  tone-3: colors-vars.$tone-3,
+  tone-4: colors-vars.$tone-4,
+  tone-5: colors-vars.$tone-5,
+  tone-6: colors-vars.$tone-6,
+  tone-7: colors-vars.$tone-7,
+  tone-8: colors-vars.$tone-8,
+  tone-9: colors-vars.$tone-9,
+  // Opacity variation.  Can be made for any color option in the palette,
+  tone-9-opacity-60: rgba(colors-vars.$tone-9, 0.6),
+  tone-9-opacity-15: rgba(colors-vars.$tone-9, 0.15),
+  tone-9-opacity-06: rgba(colors-vars.$tone-9, 0.06),
+  // Action colors
+  warning: colors-vars.$warning,
+  error: colors-vars.$error,
+  success: colors-vars.$success,
+  // Obsolete - fall back only, do not use in new development.
+  primary: colors-vars.$blue,
+  accent: colors-vars.$red,
+  lightest: colors-vars.$white,
+  lighter: colors-vars.$gray-6,
+  light: colors-vars.$gray-15,
+  darker: colors-vars.$gray-60,
+  darkest: colors-vars.$black
+);
+
+///////////
+// Usage //
+///////////
+// This color function makes it easy for you to call a color by it's functional
+// name anywhere you need.
+// E.g. to use the `text` color, you type: `color: clr(tone-9);`
+//
+// How it works:
+// This function works in conjunction with the dynamic css custom properties
+// declarations below. The item called in the function is prefixed with
+// `var(--c-` to call the custom property for that color.
+// E.g. `color: clr(tone-9);` will return `color: var(--c-text);`
+// Note: (The `--c-` is added via the `@each` loops below)
+@function clr($colorChoice) {
+  @return var(--c-#{$colorChoice});
+}
+
+// Create CSS custom properties
+// This is what powers the built-in OS light/dark mode switching.
+// For each color variable above (e.g. `text` and `background`) a css custom
+// property will be created. (e.g. `--c-text:` and `--c-background:`).
+//
+// The first `@each` below will create a custom property for each item in the
+// `$defaultColors` map. So put all of your default colors there.
+//
+// The `prefers-color-scheme: dark` media query below will then create custom
+// properties for each of the colors in the `$darkColors` map only if the
+// browser supports that feature. If there is an exact match (e.g. `text`) in
+// both maps, the one from `$darkColors` will be used on machines that have
+// opted to use the 'dark mode' on their OS.
+:root {
+  // Create custom properties for default colors
+  @each $name, $color in $defaultColors {
+    --c-#{$name}: #{$color};
+  }
+
+  // Create custom properties for dark colors, an duse them if the user's OS has dark mode enabled
+  @media (prefers-color-scheme: dark) {
+    @each $name, $color in $darkColors {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  // Use the default color scheme for the "Default Theme" section of the
+  // component library regardless of OS setting.
+  // This is required to show the correct colors in the component library at all times
+  [data-theme='default'] {
+    @each $name, $color in $defaultColors {
+      --c-#{$name}: #{$color};
+    }
+  }
+
+  // Use the dark color scheme for the "Dark Theme" section of the  component
+  // library regardless of OS setting.
+  // This is required to show the correct colors in the component library at all times
+  [data-theme='dark'] {
+    @each $name, $color in $darkColors {
+      --c-#{$name}: #{$color};
+    }
+  }
+}

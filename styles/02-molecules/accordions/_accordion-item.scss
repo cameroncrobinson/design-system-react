@@ -1,0 +1,91 @@
+.accordion-item {
+  background: clr(tone-1);
+  border-bottom: 2px solid clr(primary-3);
+  cursor: pointer;
+  color: clr(tone-9);
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0.75rem 0.5rem 0.75rem 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:focus {
+    @include focus;
+
+    border-radius: 3px;
+  }
+
+  svg,
+  i {
+    width: 1rem;
+    font-size: 1rem;
+  }
+}
+
+.accordion-body.open {
+  display: block;
+}
+
+.accordion-text {
+  background: clr(tone-1);
+  color: clr(lidarkest);
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0s ease-out;
+
+  a {
+    @include link;
+  }
+
+  ul,
+  ol {
+    padding-left: 1.4rem;
+  }
+}
+
+.accordion-item.open {
+  svg,
+  i {
+    transform: rotate(180deg);
+  }
+}
+
+.accordion-title {
+  background: clr(lighest);
+  border: none;
+  color: clr(tone-9);
+  cursor: pointer;
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0 1rem 0 0;
+  text-align: left;
+  text-decoration: none;
+  width: 100%;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    @include focus;
+
+    border-radius: 3px;
+  }
+}
+
+.accordion-item.open + .accordion-text {
+  max-height: inherit;
+  padding: 0.75rem 0;
+}
+
+// IOS safari fix
+.safari {
+  .accordion-title {
+    color: clr(tone-9);
+    text-decoration: none;
+  }
+}

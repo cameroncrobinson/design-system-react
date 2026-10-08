@@ -1,0 +1,81 @@
+// CSS-only select styling (from https://github.com/filamentgroup/select-css)
+
+.form-item__dropdown {
+  border-radius: 3px;
+  display: block;
+  position: relative;
+
+  optgroup {
+    font-weight: 600;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: clr(background-inverse);
+  }
+
+  &::after {
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid clr(tone-9-opacity-60);
+    content: ' ';
+    position: absolute;
+    top: 42%;
+    right: 1em;
+    z-index: 2;
+
+    /* These hacks make the select behind the arrow clickable in some browsers */
+    pointer-events: none;
+    display: none;
+  }
+
+  &:hover {
+    border-color: clr(accent-high);
+  }
+}
+
+.form-item__select {
+  height: 41px; // set height required for discrepancy between .form-item__dropdown border and the select :focus border
+  margin: 0;
+  outline: none;
+  padding: 0.6rem 0.8rem 0.5rem;
+  width: 100%;
+  border: 2px solid clr(tone-9-opacity-15);
+  border-radius: 3px;
+  background-color: clr(tone-1);
+  color: clr(tone-9);
+  font-size: 1.125rem;
+
+  // &:focus-visible {
+  //   outline: 2px solid clr(tone-9-opacity-15);
+  //   outline-offset: 2px;
+  //   color: clr(tone-9);
+  // }
+}
+
+@supports (-webkit-appearance: none) or (appearance: none) or
+  ((-moz-appearance: none) and (mask-type: alpha)) {
+  /* Show custom arrow */
+  .form-item__dropdown::after {
+    display: block;
+  }
+
+  /* Remove select styling */
+  .form-item__select {
+    padding-right: 2rem; /* Match-01 */
+
+    /* inside @supports so that iOS <= 8 display the native arrow */
+    background: none; /* Match-04 */
+
+    /* inside @supports so that Android <= 4.3 display the native arrow */
+    //border: 2px solid clr(lighter); /* Match-05 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: clr(tone-1);
+
+    &:focus {
+      border-color: clr(tone-9);
+      border-radius: 3px;
+    }
+  }
+}

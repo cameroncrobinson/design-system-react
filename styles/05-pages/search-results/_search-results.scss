@@ -1,0 +1,39 @@
+.search-result-page {
+  .summary {
+    border-bottom: solid 2px clr(tone-9-opacity-15);
+    color: clr(tone-6);
+    padding-bottom: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .event-card,
+  .horizontal_card {
+    margin-bottom: $space-s;
+
+    @include medium {
+      margin-bottom: $space-s-desktop;
+    }
+  }
+
+  .form-item__textfield {
+    border: 2px solid clr(tone-9);
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+
+    @include medium {
+      flex-direction: row;
+    }
+
+    .main-content {
+      order: 2;
+    }
+
+    .main-sidebar {
+      order: 1;
+      margin-bottom: $space-s;
+    }
+  }
+}

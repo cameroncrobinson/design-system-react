@@ -1,0 +1,50 @@
+/* (A) ACCORDION WRAPPER */
+.accordion-group {
+  margin: 0 0 $space-l;
+  width: 100%;
+
+  @include large {
+    margin: 0 0 $space-l-desktop;
+  }
+
+  &--margin-zero {
+    margin: 0;
+
+    @include large {
+      margin: 0;
+    }
+  }
+
+  &--margin-small {
+    margin: 0 0 $space-s;
+
+    @include large {
+      margin: 0 0 $space-s-desktop;
+    }
+  }
+
+  &--margin-medium {
+    margin: 0 0 $space-m;
+
+    @include large {
+      margin: 0 0 $space-m-desktop;
+    }
+  }
+
+  &--margin-large,
+  &--margin-default {
+    margin: 0 0 $space-l;
+
+    @include large {
+      margin: 0 0 $space-l-desktop;
+    }
+  }
+
+  &--margin-top {
+    margin: $space-l 0 0;
+
+    @include large {
+      margin: $space-l-desktop 0 0;
+    }
+  }
+}

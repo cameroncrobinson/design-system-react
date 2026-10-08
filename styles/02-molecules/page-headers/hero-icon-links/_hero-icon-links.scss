@@ -1,0 +1,50 @@
+.hero-container {
+  .hero-icon-links {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+    height: 250px;
+
+    @include xl {
+      height: unset;
+      width: calc(66.66% - $space-m-desktop);
+    }
+  }
+
+  .header-icon-links {
+    background-color: clr(primary-4);
+    margin-bottom: 0;
+    padding: $space-m $space-s;
+
+    @include medium {
+      padding: $space-m-desktop;
+      padding-right: $grid-md-margin;
+    }
+
+    @include large {
+      padding-right: $grid-l-margin;
+    }
+
+    @include xl {
+      padding-right: $grid-xl-margin;
+      width: calc(33.33% + $space-m-desktop);
+    }
+
+    @include xxl {
+      padding-right: $grid-xxl-margin;
+    }
+
+    .icon-card {
+      margin-bottom: $space-m;
+
+      @include large {
+        margin-bottom: $space-double;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

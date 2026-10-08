@@ -1,0 +1,20 @@
+.form-item {
+  .icon {
+    color: clr(tone-9-opacity-60);
+    font-size: 1rem;
+    right: 30px;
+    top: 9px;
+    position: absolute;
+    width: 0;
+    z-index: 1;
+  }
+}
+
+// Fix input height mismatch in Safari.
+.safari {
+  .search-form {
+    .js-form-submit.button {
+      padding: 0.63rem 0.5rem;
+    }
+  }
+}

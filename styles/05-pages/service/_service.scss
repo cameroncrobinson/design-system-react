@@ -1,0 +1,44 @@
+.service {
+  &--contact {
+    .call-out-box {
+      margin-bottom: $space-m-desktop;
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &--tags {
+    border-top: 2px solid clr(tone-3);
+    padding-top: $space-m-desktop;
+    margin: 0 0 $space-l;
+
+    @include large {
+      margin: 0 0 $space-l-desktop;
+    }
+
+    span:nth-of-type(2) {
+      display: flex;
+      flex-direction: column;
+
+      @include medium {
+        flex-direction: row;
+      }
+    }
+
+    label {
+      margin-right: 5px;
+    }
+  }
+
+  .featured-content {
+    display: flex;
+    flex-direction: column;
+  }
+}

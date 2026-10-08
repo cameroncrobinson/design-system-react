@@ -1,0 +1,9 @@
+.event-card-group {
+  @include large {
+    @include nested-flexgrid;
+  }
+
+  .card_columns {
+    margin-bottom: $space-double;
+  }
+}

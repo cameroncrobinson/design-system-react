@@ -1,0 +1,31 @@
+.content-moderation-entity-moderation-form {
+  margin-bottom: 2rem;
+
+  @include large {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 5000;
+    margin-bottom: 0;
+  }
+
+  .entity-moderation-form {
+    background-color: clr(primary-4);
+    margin: 0;
+    padding: 0 1rem;
+    border: 1px solid clr(tone-5);
+  }
+
+  .entity-moderation-form__item {
+    max-width: 18rem;
+
+    input {
+      max-width: 18rem;
+    }
+
+    .form_submit {
+      border: 0;
+      padding: 0.675rem;
+    }
+  }
+}

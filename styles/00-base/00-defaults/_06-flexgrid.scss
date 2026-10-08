@@ -1,0 +1,36 @@
+// Flexgrid classes
+.flexgrid {
+  max-width: $grid-xxl-breakpoint;
+
+  @include flexgrid;
+
+  &-nm {
+    @include grid-base(100%);
+  }
+}
+
+.col {
+  @include small {
+    @include columns-loop(xxl, $grid-xxl-columns, $xxl-gutter);
+
+    @media screen and (max-width: $grid-xl-breakpoint) {
+      @include columns-loop(xl, $grid-xl-columns, $xl-gutter);
+    }
+
+    @media screen and (max-width: $grid-l-breakpoint) {
+      @include columns-loop(l, $grid-l-columns, $l-gutter);
+    }
+
+    @media screen and (max-width: $grid-md-breakpoint) {
+      @include columns-loop(md, $grid-md-columns, $md-gutter);
+    }
+
+    @media screen and (max-width: $grid-sm-breakpoint) {
+      @include columns-loop(sm, $grid-sm-columns, $sm-gutter);
+    }
+  }
+}
+
+[class*='col-'] {
+  @include margin;
+}

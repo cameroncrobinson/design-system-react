@@ -1,0 +1,27 @@
+.card-listing-header {
+  margin-bottom: $space-double;
+  max-width: 700px;
+
+  @include large {
+    display: flex;
+    height: calc($space-double + $space-one-half);
+    justify-content: space-between;
+    gap: $space-double;
+  }
+
+  .h2 {
+    margin: 0.1rem 0;
+  }
+}
+
+.content-listing {
+  .card-group {
+    .card_columns {
+      margin-bottom: $space;
+
+      @include medium {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

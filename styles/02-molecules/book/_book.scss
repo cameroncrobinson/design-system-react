@@ -1,0 +1,30 @@
+.book {
+  display: inline-block;
+  margin-right: $space-double;
+
+  &:first-of-type {
+    padding-left: 0;
+  }
+
+  .image {
+    display: block;
+    height: 220px;
+    max-width: unset;
+
+    .image {
+      min-height: 220px;
+    }
+  }
+
+  p {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .h3 {
+    font-weight: 600;
+    margin: $space-one-half 0;
+    min-width: 90%;
+    width: min-content;
+  }
+}

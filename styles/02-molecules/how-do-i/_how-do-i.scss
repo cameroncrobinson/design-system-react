@@ -1,0 +1,140 @@
+.how-do-i {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: space-evenly;
+  width: 100%;
+
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    grid-row: 1 / 2;
+  }
+
+  .tab {
+    color: clr(tone-9);
+    cursor: pointer;
+    font-family: $font-body;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    margin-bottom: calc($space - $space-one-half);
+    text-decoration: none;
+
+    .tab-link {
+      background-color: clr(tone-1);
+      border-radius: 3px;
+      color: clr('tone-9');
+      display: flex;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1rem;
+      margin-right: $space-one-half;
+      padding: calc($space - $space-one-fourth);
+      text-decoration: none;
+
+      &.active {
+        background-color: clr(tone-9);
+        color: clr(tone-1);
+      }
+
+      .icon {
+        margin-right: $space-one-fourth;
+
+        @include medium {
+          margin-right: $space-one-half;
+        }
+      }
+    }
+
+    &:hover {
+      .tab-link {
+        background-color: clr(tone-9);
+        color: clr(tone-1);
+      }
+    }
+
+    @include medium {
+      margin: 0 0 $space-one-half 0;
+
+      .tab-link {
+        background-color: transparent;
+        border-radius: 0;
+        font-size: 1.37rem;
+        line-height: 1.137rem;
+        margin-right: calc($space-triple + $space-one-eighth);
+        padding: 0;
+
+        &.active {
+          background-color: transparent;
+          color: clr(tone-9);
+          border-bottom: 4px solid black;
+          padding-bottom: 0.95rem;
+        }
+      }
+
+      &:hover {
+        .tab-link {
+          background-color: transparent;
+          color: clr(tone-9);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .menu {
+    grid-column: 1 / end;
+    grid-row: 2 / 3;
+    background-color: clr(tone-1);
+    border-top: 2px solid clr(tone-9);
+    display: flex;
+    flex-direction: column;
+    padding: $space;
+    width: 100%;
+
+    @include medium {
+      display: grid;
+      gap: 0 $space-double;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: -$space-one-half;
+      padding: calc($space-triple + $space-one-eighth);
+    }
+
+    &.hidden {
+      display: none;
+    }
+
+    .link {
+      color: clr(tone-9);
+      font-size: 1rem;
+      margin-bottom: $space-one-half;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        color: clr(primary-1);
+      }
+
+      @include medium {
+        font-size: 1.125rem;
+      }
+    }
+  }
+
+  .ext {
+    &:hover {
+      color: clr(primary-1);
+    }
+
+    svg {
+      fill: clr(tone-9);
+
+      path {
+        stroke: clr(tone-9);
+      }
+    }
+  }
+}

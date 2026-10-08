@@ -1,0 +1,109 @@
+/*
+ * General Variables
+ * Note: colors should go into
+ * components/00-base/01-colors/_color-vars.css
+ * and breakpoint related vars into
+ * components/00-base/base/_breakpoints.css
+*/
+
+// Fonts
+$font-body: 'Inter', sans-serif;
+$font-heading: 'Inter', sans-serif;
+
+// Font Sizes
+$font-body-size: 1.125rem;
+
+// rem() function base size
+$default-size: 16px;
+
+// Spacing
+$space: 1rem;
+
+// Times
+$space-double: calc($space * 2);
+$space-triple: calc($space * 3);
+$space-quadruple: calc($space * 4);
+$space-quintuple: calc($space * 5);
+$space-sextuple: calc($space * 6);
+$space-septuple: calc($space * 7);
+
+// Divided
+$space-one-half: calc($space/2);
+$space-one-third: calc($space/3);
+$space-one-fourth: calc($space/4);
+$space-one-fifth: calc($space/5);
+$space-one-sixth: calc($space/6);
+$space-one-seventh: calc($space/7);
+$space-one-eighth: calc($space/8);
+
+// Spacing variables
+$space-s: 1.25rem;
+$space-s-desktop: 1.5625rem;
+$space-m: 1.875rem;
+$space-m-desktop: 3.125rem;
+$space-l: 2.5rem;
+$space-l-desktop: 5.625rem;
+
+// Flexbox Grid Variables
+$grid-xxl-columns: 12;
+$grid-xxl-margin: 150px;
+$grid-xxl-gutter: 50px;
+$grid-xxl-breakpoint: 1600px;
+
+$grid-xl-columns: 12;
+$grid-xl-margin: 100px;
+$grid-xl-gutter: 50px;
+$grid-xl-breakpoint: 1300px;
+
+$grid-l-columns: 12;
+$grid-l-margin: 50px;
+$grid-l-gutter: 50px;
+$grid-l-breakpoint: 1000px;
+
+$grid-md-columns: 12;
+$grid-md-margin: 50px;
+$grid-md-gutter: 50px;
+$grid-md-breakpoint: 768px;
+
+$grid-sm-columns: 12;
+$grid-sm-margin: 20px;
+$grid-sm-gutter: 50px;
+$grid-sm-breakpoint: 576px;
+
+// Pixels to Percentage - good practice for horizontal gutters
+// For Grid wrappers
+$xxl-grid-width: calc(
+  100% - (($grid-xxl-margin * 2 / $grid-xxl-breakpoint) * 100%)
+);
+$xl-grid-width: calc(
+  100% - (($grid-xl-margin * 2 / $grid-xl-breakpoint) * 100%)
+);
+$l-grid-width: calc(100% - (($grid-l-margin * 2 / $grid-l-breakpoint) * 100%));
+$md-grid-width: calc(
+  100% - (($grid-md-margin * 2 / $grid-md-breakpoint) * 100%)
+);
+$sm-grid-width: calc(
+  100% - (($grid-sm-margin * 2 / $grid-sm-breakpoint) * 100%)
+);
+
+// Pixels to Rems - to keep gutter consistency with grid designs
+// For Grid gutters
+$xxl-gutter: calc($grid-xxl-gutter / 2);
+$xl-gutter: calc($grid-xl-gutter / 2);
+$l-gutter: calc($grid-l-gutter / 2);
+$md-gutter: calc($grid-md-gutter / 2);
+$sm-gutter: calc($grid-sm-gutter / 2);
+
+$col-gap: 3.125rem;
+
+// $xxl-gutter: (($grid-xxl-gutter / ($grid-xxl-breakpoint - ($grid-xxl-margin * 2))) * 100%);
+// $xl-gutter: (($grid-xl-gutter / ($grid-xl-breakpoint - ($grid-xl-margin * 2))) * 100%);
+// $l-gutter: (($grid-l-gutter / ($grid-l-breakpoint - ($grid-l-margin * 2))) * 100%);
+// $md-gutter: (($grid-md-gutter / ($grid-md-breakpoint - ($grid-md-margin * 2))) * 100%);
+// $sm-gutter: (($grid-sm-gutter / ($grid-sm-breakpoint - ($grid-sm-margin * 2))) * 100%);
+
+// $xxl-grid-width: ($grid-xxl-breakpoint - $grid-xxl-margin * 2);
+// $xl-grid-width: ($grid-xl-breakpoint - $grid-xl-margin * 2);
+// $l-grid-width: ($grid-l-breakpoint - $grid-l-margin * 2);
+// $md-grid-width: ($grid-md-breakpoint - $grid-md-margin * 2);
+// $sm-grid-width: ($grid-sm-breakpoint - $grid-sm-margin * 2);

@@ -1,0 +1,56 @@
+.river-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0.875rem;
+  padding: 0 $grid-sm-margin;
+
+  @include medium {
+    display: flex;
+    margin-bottom: $space-m-desktop;
+    padding: 0 $grid-md-margin;
+  }
+
+  @include large {
+    padding: 0;
+  }
+
+  .tab {
+    display: inline-block;
+    margin-bottom: $space-one-half;
+    white-space: nowrap;
+
+    @include medium {
+      margin-bottom: 0;
+    }
+
+    .tab-link {
+      margin-right: $space;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        box-shadow: none;
+        border: 0;
+      }
+
+      &.active {
+        color: clr(tone-9);
+        text-decoration: none;
+
+        &:hover {
+          color: clr(tone-9);
+        }
+      }
+    }
+  }
+}
+
+.rivers-container {
+  width: 100%;
+
+  .book-river {
+    &.hidden {
+      display: none;
+    }
+  }
+}

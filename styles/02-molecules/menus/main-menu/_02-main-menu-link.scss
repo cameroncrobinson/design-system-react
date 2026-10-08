@@ -1,0 +1,77 @@
+/* A */
+.main-menu__link {
+  color: clr(tone-1);
+  display: block;
+  line-height: 1.5;
+  padding: calc($space-one-half + $space-one-fifth)
+    calc($space + $space-one-fourth);
+  text-decoration: none;
+  font-weight: 600;
+
+  &--with-sub {
+    width: 100%;
+  }
+
+  @include large {
+    border-bottom: none;
+    color: clr(tone-9);
+    display: inline-block;
+    font-size: 1.125rem;
+    line-height: 1.15;
+    padding: 0;
+    text-transform: none;
+    position: relative;
+    width: auto;
+
+    &.active,
+    &:active,
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &::after {
+      color: clr(tone-9);
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
+
+    &--sub::after {
+      display: none;
+    }
+  }
+
+  @include large {
+    font-size: 1.125rem;
+    max-width: 170px;
+  }
+
+  @include xl {
+    font-size: 1.25rem;
+    max-width: 190px;
+  }
+}
+
+/*
+ * Sub Navigation Links
+ */
+
+/* A (Nested) */
+.main-menu__link--sub {
+  color: clr(accent-1);
+  padding-left: $space-triple;
+  font-weight: normal;
+
+  @include medium {
+    color: clr(highlight);
+    display: block;
+    padding: $space-one-third $space;
+  }
+}
+
+.main-menu--sub-2 {
+  background-color: clr(highlight-high);
+}
+
+.main-menu__link--sub-2 {
+  padding-left: $space-quadruple;
+}

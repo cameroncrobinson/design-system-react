@@ -1,0 +1,141 @@
+.section {
+  background-color: clr(tone-1);
+  padding: 0;
+  margin: 0 0 $space-l;
+
+  @include large {
+    padding: 0;
+    margin: 0 0 $space-l-desktop;
+  }
+
+  &--with-background {
+    padding-top: $space-l;
+    padding-bottom: $space-l;
+
+    @include xl {
+      padding-top: $space-l-desktop;
+      padding-bottom: $space-l-desktop;
+    }
+
+    .flexgrid-nm {
+      padding: 0 $space-s;
+
+      @include medium {
+        padding: 0 $space-m;
+      }
+
+      @include large {
+        padding: 0;
+      }
+    }
+  }
+
+  &--primary-4 {
+    background-color: clr(primary-4);
+
+    &--margin-zero {
+      margin: 0;
+    }
+  }
+
+  &--padding-regular {
+    padding: $space-l 0;
+
+    @include large {
+      padding: $space-l-desktop 0;
+    }
+  }
+
+  &--padding-reduced {
+    padding: $space-m 0;
+
+    @include large {
+      padding: $space-m-desktop 0;
+    }
+  }
+
+  &--padding-top {
+    padding-top: $space-l 0;
+    padding-bottom: 0;
+
+    @include large {
+      padding-top: $space-l-desktop;
+    }
+  }
+
+  &--padding-bottom {
+    padding-bottom: $space-l;
+    padding-top: 0;
+
+    @include large {
+      padding-bottom: $space-l-desktop;
+    }
+  }
+
+  &--padding-none {
+    padding: 0;
+  }
+
+  &--margin-zero {
+    margin: 0;
+
+    @include large {
+      margin: 0;
+    }
+  }
+
+  &--margin-small {
+    margin: 0 0 $space-s;
+
+    @include large {
+      margin: 0 0 $space-s-desktop;
+    }
+  }
+
+  &--margin-medium {
+    margin: 0 0 $space-m;
+
+    @include large {
+      margin: 0 0 $space-m-desktop;
+    }
+  }
+
+  &--margin-large {
+    margin: 0 0 $space-l;
+
+    @include large {
+      margin: 0 0 $space-l-desktop;
+    }
+  }
+
+  &--margin-top {
+    margin: $space-l 0 0;
+
+    @include large {
+      margin: $space-l-desktop 0 0;
+    }
+  }
+
+  &__header {
+    align-items: baseline;
+    display: block;
+    margin-bottom: $space-s;
+    width: 100%;
+
+    @include medium {
+      display: grid;
+      gap: $space;
+      grid-template-columns: 1fr auto;
+      margin-bottom: $space;
+    }
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  // Integration with drupal paragraphs
+  .paragraph-content {
+    width: 100%;
+  }
+}

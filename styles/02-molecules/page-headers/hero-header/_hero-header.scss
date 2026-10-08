@@ -1,0 +1,116 @@
+.hero-header {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: clr(tone-1);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 50%;
+  margin-left: -50%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+
+  @include medium {
+    min-height: 22rem;
+    justify-content: center;
+  }
+
+  &__content {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-top: 2px solid clr(primary-3);
+    padding: calc($space + $space-one-fourth);
+    margin-top: calc($space + $space-one-fourth);
+    margin-bottom: 30vh;
+    font-weight: 400;
+
+    .hero-header__subheading {
+      margin-bottom: 0;
+      font-weight: 400;
+    }
+
+    @include medium {
+      padding: calc($space + $space-one-half);
+      margin: calc($space-double + $space-one-half) 0;
+    }
+  }
+
+  &--video {
+    min-height: 20rem;
+    z-index: inherit;
+
+    video {
+      display: none;
+
+      @include medium {
+        display: block;
+        object-fit: cover;
+        z-index: 1;
+      }
+    }
+
+    @include medium {
+      height: 33.33vw;
+      justify-content: flex-end;
+    }
+  }
+
+  &__container--video {
+    align-items: flex-end;
+    top: 1.25rem;
+    justify-content: space-between;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+
+    @include medium {
+      top: auto;
+      bottom: 2.5rem;
+    }
+
+    .hero-header__controls {
+      display: none;
+      margin-bottom: 0;
+      padding: 0;
+
+      @include medium {
+        display: block;
+      }
+
+      .button {
+        background-color: rgba(255, 255, 255, 0.9);
+        color: clr(tone-9-opacity-60);
+        white-space: nowrap;
+
+        &:hover {
+          background-color: clr(primary-2) !important;
+          color: clr(tone-1);
+          opacity: 1;
+        }
+      }
+    }
+
+    .hero-header__content {
+      margin: 0;
+      font-size: 1.375rem;
+      padding: $space calc($space + $space-one-fourth);
+
+      .link {
+        color: clr(tone-9);
+        display: block;
+        font-weight: 700;
+        text-decoration: none;
+        width: 100%;
+
+        &:hover {
+          text-decoration: underline;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

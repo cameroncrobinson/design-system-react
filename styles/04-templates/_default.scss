@@ -1,0 +1,85 @@
+/*
+ * General Layout
+*/
+
+$sidebar-width: 33%;
+$gutter: $space;
+$main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
+
+/*
+ * Layout Using Flexbox (IE11+).
+ * Remove this and uncomment Grid code below to use CSS Grid.
+*/
+
+.main-sidebar {
+  margin-bottom: $space-l;
+  order: 2;
+
+  @include large {
+    order: 1;
+    padding-left: 0;
+    margin-bottom: $space-l-desktop;
+  }
+}
+
+.main-content {
+  margin-bottom: 0;
+  order: 1;
+
+  &.col-xxl-12 {
+    padding: 0;
+  }
+
+  @include large {
+    order: 2;
+
+    &--with-sidebar {
+      padding-right: 0;
+    }
+  }
+
+  .paragraph-content {
+    margin-bottom: $space-m;
+
+    @include medium {
+      margin-bottom: $space-m-desktop;
+    }
+
+    //Account for bottom gutter from icon links.
+    &.icon-links {
+      @include medium {
+        margin-bottom: 0;
+      }
+    }
+
+    //Accordion margin handled by base class only.
+    &.accordion {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Storybook layout.
+.sb-main-fullscreen {
+  .layout {
+    &--padding-top {
+      padding-top: 5rem;
+
+      @include large {
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+.main--full-width {
+  .main-content {
+    .paragraph-content {
+      margin-bottom: 0;
+    }
+  }
+
+  .tabs__nav {
+    @include flexgrid;
+  }
+}

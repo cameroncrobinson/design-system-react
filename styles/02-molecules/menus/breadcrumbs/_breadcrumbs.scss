@@ -1,0 +1,55 @@
+$color-breadcrumb: clr(tone-9-opacity-60);
+$color-breadcrumb-hover: clr(primary-2);
+$color-breadcrumb-active: clr(tone-9-opacity-60);
+
+.breadcrumb {
+  margin: $space-s auto;
+
+  @include large {
+    margin: $space-s-desktop auto;
+  }
+
+  ol {
+    @include list-reset;
+  }
+}
+
+.breadcrumb__link {
+  text-decoration: underline;
+}
+
+.breadcrumb__item,
+.breadcrumb__link,
+.breadcrumb__link:link,
+.breadcrumb__link:visited,
+.breadcrumb__link:focus {
+  color: $color-breadcrumb;
+}
+
+.breadcrumb__link:active {
+  color: $color-breadcrumb-active;
+}
+
+.breadcrumb__link:hover {
+  color: $color-breadcrumb-hover;
+}
+
+.breadcrumb__item {
+  display: inline-block;
+  font-size: $font-body-size;
+
+  &::after {
+    content: '' !important;
+    display: none;
+  }
+
+  &:last-child {
+    color: $color-breadcrumb-active;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  i {
+    margin: 0 0.55rem;
+  }
+}

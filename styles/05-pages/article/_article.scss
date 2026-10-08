@@ -1,0 +1,48 @@
+.article {
+  picture.image {
+    @include medium {
+      float: right;
+      margin-left: $space;
+      max-width: 600px;
+    }
+  }
+
+  &__main-content {
+    order: 2;
+
+    @include large {
+      order: 1;
+    }
+
+    .badge-group {
+      border-top: solid 2px clr(tone-9-opacity-15);
+      margin: 2rem 0 2.5rem;
+      padding-top: 2rem;
+    }
+
+    .rich-text {
+      display: block;
+
+      .flexgrid-nm {
+        display: block;
+      }
+
+      p:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__image {
+    order: 1;
+
+    @include large {
+      order: 2;
+    }
+  }
+
+  .featured-content {
+    display: flex;
+    flex-direction: column;
+  }
+}

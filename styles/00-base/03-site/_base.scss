@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: clr(tone-1);
+  color: clr(tone-9);
+  font-size: 16px;
+  line-height: 1.5;
+  padding-top: calc($space-quintuple + $space-one-eighth);
+
+  @include body-copy;
+
+  @include large {
+    padding-top: 0;
+  }
+
+  p {
+    font-family: $font-body;
+    font-size: $font-body-size;
+  }
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}

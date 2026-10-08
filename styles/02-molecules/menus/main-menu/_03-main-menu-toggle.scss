@@ -1,0 +1,58 @@
+/* Toggle */
+.toggle-expand {
+  color: clr(primary-2);
+  background-color: clr(primary-4);
+  display: flex;
+  text-decoration: none;
+  padding: $space;
+  width: 80px;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+
+  i,
+  svg {
+    font-size: 1.5rem;
+  }
+
+  @include large {
+    display: none;
+  }
+
+  /* See main-menu.js */
+  &--open {
+    background-color: clr(primary-2);
+    color: clr(tone-1);
+  }
+}
+
+.toggle-expand__text {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* SVG icon */
+.toggle-expand__icon {
+  height: 3rem;
+  width: 3rem;
+  margin: 0 auto;
+}
+
+.toggle-expand__open {
+  display: inline-block;
+  text-align: center;
+
+  .toggle-expand--open & {
+    display: none;
+  }
+}
+
+.toggle-expand__close {
+  display: none;
+  text-align: center;
+
+  .toggle-expand--open & {
+    display: inline-block;
+  }
+}

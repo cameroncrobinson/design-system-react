@@ -1,0 +1,20 @@
+.card-group {
+  @include large {
+    @include nested-flexgrid;
+  }
+
+  &.flexgrid--card-group_header {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card_columns > div {
+    height: 100%;
+  }
+
+  .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,48 @@
+.landing-page {
+  .call-out-box {
+    margin-bottom: $space-m;
+
+    @include flexgrid;
+
+    @include large {
+      margin-bottom: $space-m-desktop;
+    }
+
+    .text-long {
+      width: 100%;
+
+      .flexgrid-nm {
+        @include large {
+          @include nested-flexgrid;
+        }
+      }
+    }
+  }
+
+  .rich-text,
+  .rich-text__h2 {
+    &--no-bg {
+      @include flexgrid;
+    }
+  }
+
+  .cta-buttons {
+    @include flexgrid;
+  }
+
+  .connect-with-us {
+    @include flexgrid;
+  }
+
+  .main {
+    .section__icon-group {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .featured-content {
+    display: flex;
+    flex-direction: column;
+  }
+}

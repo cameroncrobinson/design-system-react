@@ -1,0 +1,72 @@
+.branch {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $space-l;
+
+    @include large {
+      flex-direction: row;
+      margin-bottom: $space-l-desktop;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-right: $space-m-desktop;
+
+    @include large {
+      @include nested-flexgrid;
+    }
+  }
+
+  &__summary {
+    padding-right: $space-m-desktop;
+    margin-bottom: $space-m;
+
+    @include large {
+      margin-bottom: $space-m-desktop;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+
+    @include large {
+      flex-direction: row;
+
+      &-left,
+      &-right {
+        @include nested-flexgrid;
+      }
+    }
+
+    .h3--hours {
+      margin-top: $space-m;
+
+      @include large {
+        margin-top: $space-m-desktop;
+      }
+    }
+  }
+
+  &__image {
+    @include large {
+      @include nested-flexgrid;
+    }
+
+    .image {
+      width: 100%;
+    }
+  }
+
+  .featured-content {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,163 @@
+$mobile-bg-color: #f4f9fb; // rgba($primary-4, 0.5)
+
+.header {
+  border-bottom: solid 2px clr(tone-9);
+  background-color: $mobile-bg-color;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10000;
+
+  @include large {
+    background-color: clr(tone-1);
+    border-bottom: none;
+    position: relative;
+  }
+
+  &__top {
+    background-color: clr(primary-2);
+    color: clr(tone-1);
+    font-size: 1rem;
+    display: none;
+
+    @include large {
+      display: flex;
+    }
+
+    .top__inner {
+      justify-content: flex-end;
+      gap: $space-double;
+      align-items: baseline;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-flow: column nowrap;
+
+    @media screen and (max-width: $grid-l-breakpoint) {
+      width: 100%;
+    }
+  }
+
+  &__primary {
+    align-items: center;
+    display: grid;
+    padding: 0;
+    gap: $space-double;
+    grid-template-columns: 1fr 5rem; //Logo + Menu
+
+    @include large {
+      padding: 0.5rem 0;
+      grid-template-columns: 10rem 1fr;
+    }
+
+    @include xl {
+      padding: 1.5rem 0 1rem;
+    }
+
+    @include xl {
+      grid-template-columns: 13rem 1fr;
+    }
+  }
+
+  &__branding {
+    margin: 0 calc($space + $space-one-fourth);
+    max-width: 13rem;
+
+    img {
+      max-height: 3.125rem;
+    }
+    @include large {
+      margin: 0;
+
+      img {
+        height: auto;
+        max-height: inherit;
+        width: 100%;
+      }
+    }
+  }
+
+  &__menu {
+    @include large {
+      width: 100%;
+    }
+  }
+
+  &__search {
+    background-color: rgba(255, 255, 255, 0.1);
+
+    .form-item {
+      margin-bottom: 0;
+      max-width: 100%;
+
+      .form-item__textfield {
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        color: clr(tone-1);
+        font-size: 1rem;
+        max-width: 100%;
+        width: 100%;
+        padding: $space-one-half $space-triple $space-one-half
+          calc($space-one-fourth + $space-one-half);
+
+        @include large {
+          max-width: 18rem;
+        }
+
+        &::placeholder {
+          color: clr(tone-1);
+          font-style: normal;
+        }
+
+        &:focus,
+        &:focus-visible {
+          outline: 0;
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+      }
+
+      .icon {
+        color: clr(tone-1);
+        top: 7px;
+      }
+    }
+  }
+
+  &__translate {
+    button {
+      background-color: clr(primary-2);
+      border: none;
+      color: clr(tone-1);
+      font-size: 1.125rem;
+      font-weight: 600;
+
+      @include large {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      &:hover {
+        span.text {
+          text-decoration: underline;
+        }
+
+        cursor: pointer;
+      }
+    }
+
+    i {
+      padding-right: $space-one-half;
+    }
+  }
+}
+
+.admin-toolbar-mediteran {
+  .header {
+    position: relative;
+    z-index: 0;
+  }
+}

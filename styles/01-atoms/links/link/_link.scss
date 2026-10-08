@@ -1,0 +1,48 @@
+@mixin link($color: clr(primary-1), $color-hover: clr(primary-2)) {
+  color: $color;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: clr(tone-1);
+    color: $color-hover;
+  }
+
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 2px clr(tone-1), 0 0 2px 4px clr(tone-9-opacity-60);
+    outline-offset: 2px;
+  }
+}
+
+.link {
+  @include link;
+
+  &--large {
+    font-weight: 600;
+  }
+}
+
+.link--dark {
+  @include link(clr(tone-9), clr(primary-1));
+}
+
+// External links icon
+.ext {
+  color: clr(primary-1);
+
+  &:hover {
+    color: clr(primary-2);
+  }
+
+  svg {
+    width: 25px;
+    height: 18px;
+    fill: clr(primary-1);
+    padding-left: 0.2rem;
+
+    path {
+      stroke: clr(primary-1);
+    }
+  }
+}

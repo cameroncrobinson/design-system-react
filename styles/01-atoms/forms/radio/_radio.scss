@@ -1,0 +1,64 @@
+.form-item--radios {
+  @include list-reset;
+
+  .form-item--radio__item {
+    line-height: normal;
+    margin-left: $space-one-third;
+
+    label {
+      font-weight: 400;
+    }
+
+    input[type='radio'] {
+      opacity: 0;
+
+      + label {
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+          content: '';
+          border-radius: 50%;
+          border: 2px solid clr(primary-1);
+          height: 18px;
+          left: -24px;
+          top: 1px;
+          width: 18px;
+          position: absolute;
+        }
+
+        &::after {
+          content: '';
+          border-radius: 50%;
+          height: 10px;
+          left: -20px;
+          position: absolute;
+          top: 5px;
+          width: 10px;
+        }
+      }
+
+      &:checked {
+        + label::after {
+          background: clr(primary-1);
+
+          /* The background is removed in Windows high-contrast mode, so we
+             need to set it explicitly here. `WindowText` is a system color
+             that should work with whatever high contrast mode the user
+             has set. */
+          @media screen and (-ms-high-contrast: active) {
+            & {
+              background: clr(tone-1);
+            }
+          }
+        }
+      }
+
+      &:focus-visible {
+        + label::before {
+          @include focus;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.combo-listing {
+  [class*='col-'] {
+    margin-bottom: $space-triple;
+  }
+
+  .button {
+    white-space: nowrap;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  @include large {
+    [class*='col-'] {
+      margin-bottom: $space;
+    }
+  }
+
+  &__card {
+    .h2 {
+      margin-left: 0;
+    }
+
+    @include large {
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    .horizontal_card {
+      margin-bottom: $space-s;
+    }
+
+    .card-listing-header {
+      max-width: 100%;
+    }
+
+    .section {
+      padding: 0;
+
+      .flexgrid {
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+}

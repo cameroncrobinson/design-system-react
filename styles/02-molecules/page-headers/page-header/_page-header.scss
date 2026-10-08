@@ -1,0 +1,21 @@
+.page-header {
+  border-bottom: solid 2px clr(tone-9);
+  margin-bottom: $space-double;
+
+  &__title {
+    margin-bottom: calc($space + $space-one-fifth);
+
+    @include medium {
+      margin-bottom: calc($space + $space-one-fourth);
+    }
+  }
+
+  &__date {
+    font-weight: 700;
+    margin-bottom: calc($space + $space-one-fifth);
+
+    @include medium {
+      margin-bottom: calc($space + $space-one-half);
+    }
+  }
+}

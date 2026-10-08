@@ -1,0 +1,62 @@
+.framework {
+  .column > div,
+  [class^='col-'] > div,
+  div [class^='col-'] > div,
+  [class*='grid-item'] {
+    background-color: clr(lighter);
+  }
+}
+
+.flexgrid .grid-container {
+  @include grid-layout(12, 1rem, 2rem);
+
+  background-color: clr(tone-1);
+}
+
+.grid-item-1 {
+  @include grid-col-start(1);
+  @include grid-col-span(4);
+  @include grid-row-start(1);
+}
+
+.grid-item-2 {
+  @include grid-col-start(5);
+  @include grid-col-span(4);
+  @include grid-row-start(1);
+}
+
+.grid-item-3 {
+  @include grid-col-start(9);
+  @include grid-col-span(4);
+  @include grid-row-start(1);
+}
+
+.grid-item-4 {
+  @include grid-col-start(9);
+  @include grid-col-span(4);
+  @include grid-row-start(2);
+}
+
+.grid-item-5 {
+  @include grid-col-start(9);
+  @include grid-col-span(4);
+  @include grid-row-start(3);
+}
+
+.grid-item-6 {
+  @include grid-col-start(5);
+  @include grid-col-span(4);
+  @include grid-row-start(3);
+}
+
+.grid-item-7 {
+  @include grid-col-start(1);
+  @include grid-col-span(4);
+  @include grid-row-start(3);
+}
+
+.grid-item-8 {
+  @include grid-col-start(1);
+  @include grid-col-span(4);
+  @include grid-row-start(2);
+}

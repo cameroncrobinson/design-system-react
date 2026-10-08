@@ -1,0 +1,44 @@
+.date-label {
+  font-family: $font-body;
+  font-weight: bold;
+  font-size: 18px;
+  color: clr(tone-9-opacity-60);
+  line-height: 1.2;
+}
+
+.date {
+  display: flex;
+  position: relative;
+
+  input[type='date'] {
+    border: 2px solid clr(tone-9-opacity-15);
+    border-radius: 3px;
+    background: $white;
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: $font-body;
+    font-style: italic;
+    font-size: 18px;
+    color: clr(tone-9-opacity-15);
+
+    @-moz-document url-prefix() {
+      text-align: right;
+      min-width: 10.25rem;
+    }
+
+    &:focus {
+      color: clr(tone-9-opacity-60);
+      font-style: normal;
+    }
+  }
+
+  i {
+    float: left;
+    position: absolute;
+    margin: 0.15rem;
+    background: $white;
+    padding: 0.13rem;
+    color: $blue;
+    pointer-events: none;
+  }
+}

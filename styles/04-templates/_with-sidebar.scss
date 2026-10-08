@@ -1,0 +1,30 @@
+.main--with-sidebar {
+  .section {
+    padding: 0;
+
+    .flexgrid {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .paragraph-content {
+    @include medium {
+      .icon_card_group.flexgrid-nm {
+        @include nested-flexgrid;
+      }
+    }
+
+    .paragraph-content {
+      margin-bottom: 0;
+    }
+  }
+
+  .sidebar-menu {
+    display: none;
+
+    @include large {
+      display: block;
+    }
+  }
+}

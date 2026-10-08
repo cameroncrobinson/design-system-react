@@ -1,0 +1,185 @@
+.sidebar-filters {
+  width: 100%;
+
+  .accordion-text {
+    background-color: clr(primary-4-darker);
+    border-top: 2px solid clr(tone-9);
+    padding: 0;
+
+    @include large {
+      display: block;
+      overflow: visible !important;
+      max-height: inherit;
+      padding: $space calc($space-one-half + $space-one-fourth) $space-double;
+    }
+
+    .chosen-container {
+      width: 100%;
+      max-width: 100%;
+
+      .chosen-single {
+        background: unset;
+        background-image: unset;
+        border: 0;
+        box-shadow: unset;
+        height: auto;
+        padding: 0;
+
+        > span {
+          color: clr(tone-9);
+          margin-top: -2px;
+        }
+
+        > div {
+          display: none;
+        }
+      }
+    }
+
+    .select-wrapper {
+      margin-right: 0;
+      width: 100%;
+    }
+
+    legend {
+      font-weight: 500;
+      margin-bottom: $space-one-half;
+    }
+
+    .js-form-item-field-date-value-min,
+    .js-form-item-field-date-value-max,
+    .js-form-item-field-start-date-value-1-min,
+    .js-form-item-field-start-date-value-1-max {
+      label {
+        font-weight: 400;
+      }
+    }
+
+    .bef-datepicker {
+      width: 100%;
+      height: 41px;
+
+      &::placeholder {
+        color: clr(tone-9);
+        font-style: normal;
+      }
+    }
+
+    .bef-checkboxes {
+      .form-item {
+        display: flex;
+        align-items: center;
+        border: none;
+
+        label {
+          padding-left: 0.5rem;
+          margin: 0.2rem 0;
+        }
+
+        input[type='checkbox'] {
+          border: 2px solid clr(tone-9-opacity-15);
+        }
+      }
+    }
+  }
+
+  .accordion-item {
+    border-bottom: 0;
+
+    @include medium {
+      padding-top: 0;
+    }
+
+    button.accordion-title {
+      color: clr(tone-9);
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      @include medium {
+        cursor: default;
+      }
+    }
+
+    &::after {
+      @include medium {
+        display: none;
+      }
+    }
+
+    svg {
+      @include medium {
+        display: none;
+      }
+    }
+
+    @include medium {
+      cursor: default;
+    }
+
+    &.open + .accordion-text {
+      padding: $space calc($space-one-half + $space-one-fourth) $space-double;
+
+      @include medium {
+        padding: $space calc($space-one-half + $space-one-fourth) $space-double;
+      }
+    }
+  }
+
+  .button {
+    margin-top: $space;
+    color: clr(tone-1);
+    padding: 0.65rem 1.25rem;
+    border: none;
+  }
+}
+
+.views-element-container {
+  .vertical.accordion-item {
+    border-bottom: 2px solid clr(tone-9);
+
+    &.open {
+      border-bottom: 0;
+    }
+
+    @include large {
+      border-bottom: 0;
+    }
+  }
+}
+
+.vertical.accordion-text {
+  border: 0;
+}
+
+@include large {
+  .vertical.accordion-text {
+    max-height: unset;
+    overflow: visible;
+    padding: 0.75rem 0;
+  }
+
+  .views-element-container {
+    .vertical.accordion-item {
+      cursor: auto;
+
+      .accordion-title {
+        cursor: auto;
+        font-size: 2rem;
+
+        &:hover {
+          text-decoration: unset;
+        }
+      }
+
+      svg {
+        display: none;
+      }
+    }
+  }
+}
+
+.event-listing__filters {
+  padding-left: 0;
+}

@@ -1,0 +1,48 @@
+.call-out-box {
+  background-color: clr(primary-4);
+  border-top: 2px solid clr(primary-3);
+  overflow-wrap: break-word;
+  margin-bottom: $space-l;
+  padding: $space-s 1.5rem;
+
+  @include medium {
+    margin-bottom: $space-l-desktop;
+    padding: 1.375rem 1.5625rem;
+  }
+
+  a {
+    @include link;
+
+    &:hover {
+      background-color: unset;
+    }
+  }
+
+  > {
+    *:first-child {
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .text-long {
+    width: 100%;
+
+    .three-col {
+      @include small {
+        .col-first {
+          padding-left: 0;
+        }
+
+        .col-third {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}

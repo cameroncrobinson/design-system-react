@@ -1,0 +1,34 @@
+.event-listing-header {
+  margin-bottom: $space-double;
+
+  @include large {
+    display: flex;
+    height: calc($space-double + $space-one-half);
+    justify-content: space-between;
+    gap: $space-double;
+  }
+
+  .h2 {
+    margin: $space-one-fourth 0;
+  }
+}
+
+.event-listing {
+  .right-content {
+    @include medium {
+      margin-right: 0;
+    }
+  }
+
+  .event-card {
+    margin-bottom: $space-double;
+  }
+
+  @include medium {
+    .border__top__right-content,
+    .border__bottom__right-content,
+    .border__none__right-content {
+      margin-right: 0;
+    }
+  }
+}

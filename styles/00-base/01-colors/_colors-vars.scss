@@ -1,0 +1,33 @@
+// Color variables - it is better to use the colors in
+// components/00-base/01-colors/_01-colors-used.scss rather than
+// these colors directly.
+
+// Tones
+$tone-1: #fff;
+$tone-2: #f7f7f7;
+$tone-3: #c8c8c8;
+$tone-4: #acacac;
+$tone-5: #909090;
+$tone-6: #737373;
+$tone-7: #565656;
+$tone-8: #363636;
+$tone-9: #000;
+
+// Grayscale - obsolete - fall back only, do not use in new development.
+$white: white;
+$gray-6: rgba(0, 0, 0, 0.06);
+$gray-15: rgba(0, 0, 0, 0.15);
+$gray-60: rgba(0, 0, 0, 0.6);
+$black: black;
+
+// Status
+$warning: #ff5a00;
+$error: #b80000;
+$success: #0d772a;
+
+// Project
+$blue: #1e6496;
+$blue-extra-light: #eaf3f8;
+$blue-light: #559ac2;
+$blue-dark: #002a42;
+$red: #c12032;

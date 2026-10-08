@@ -1,0 +1,184 @@
+.icon-card {
+  text-decoration: none;
+  color: clr(tone-9);
+  cursor: default;
+  display: grid;
+  gap: $space-s;
+  grid-template-columns: 4rem 1fr;
+  align-items: center;
+
+  @include large {
+    gap: calc($space + $space/3);
+    grid-template-columns: 4.375 1fr;
+  }
+
+  &__icon {
+    align-items: center;
+    display: flex;
+    height: 4rem;
+    justify-content: center;
+    text-align: center;
+    width: 4rem;
+
+    @include large {
+      height: 4.375rem;
+      width: 4.375rem;
+    }
+
+    i,
+    svg {
+      font-size: 2.125rem;
+
+      @include large {
+        font-size: 2.7rem;
+      }
+    }
+
+    &--accent-1 {
+      i,
+      svg {
+        color: clr(accent-1);
+      }
+    }
+
+    &--primary-1 {
+      i,
+      svg {
+        color: clr(primary-1);
+      }
+    }
+
+    &--primary-2 {
+      i,
+      svg {
+        color: clr(primary-2);
+      }
+    }
+
+    &--primary-3 {
+      i,
+      svg {
+        color: clr(primary-3);
+      }
+    }
+
+    &--tone-1 {
+      i,
+      svg {
+        color: clr(tone-1);
+      }
+    }
+
+    &--tone-9 {
+      i,
+      svg {
+        color: clr(tone-9);
+      }
+    }
+  }
+
+  .h3 {
+    margin-bottom: 0;
+
+    &--primary-1 {
+      color: clr(primary-1);
+    }
+
+    &--primary-2 {
+      color: clr(primary-2);
+    }
+
+    &--primary-3 {
+      color: clr(primary-3);
+    }
+
+    &--tone-9 {
+      color: clr(tone-9);
+    }
+
+    &--tone-8 {
+      color: clr(tone-8);
+    }
+
+    &--tone-1 {
+      color: clr(tone-1);
+    }
+  }
+
+  &--with-description {
+    align-items: flex-start;
+
+    p {
+      margin-bottom: 0;
+      margin-top: $space-one-half;
+    }
+
+    .icon-card__icon {
+      margin-top: -$space-one-third;
+    }
+  }
+
+  &--with-cta-arrow {
+    grid-template-columns: 4rem 1fr;
+
+    .icon-card__description {
+      margin-top: 0.5rem;
+
+      p,
+      .text-long {
+        display: inline;
+      }
+    }
+  }
+
+  &--link {
+    cursor: pointer;
+
+    &:hover {
+      color: clr(tone-9);
+
+      .h3 {
+        text-decoration: underline;
+      }
+
+      .icon-card__icon {
+        color: clr(tone-1);
+        border-radius: 50%;
+
+        i,
+        svg {
+          color: clr(tone-1);
+        }
+
+        &--accent-1 {
+          background-color: clr(accent-1);
+        }
+
+        &--primary-1 {
+          background-color: clr(primary-1);
+        }
+
+        &--primary-2 {
+          background-color: clr(primary-2);
+        }
+
+        &--primary-3 {
+          background-color: clr(primary-3);
+        }
+
+        &--tone-1 {
+          background-color: clr(tone-1);
+
+          i,
+          svg {
+            color: clr(primary-3);
+          }
+        }
+
+        &--tone-9 {
+          background-color: clr(tone-9);
+        }
+      }
+    }
+  }
+}

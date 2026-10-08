@@ -1,0 +1,38 @@
+.resource_card {
+  border: 2px solid clr(tone-2);
+  background-color: clr(tone-1);
+  padding: $space-m;
+  max-width: 700px;
+
+  a {
+    color: clr(tone-9);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .badge:last-child {
+    margin-bottom: 0;
+  }
+
+  .link + .content > h3 {
+    margin-top: 1.375rem;
+  }
+
+  @include medium {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+//Storybook preview
+.sb-show-main {
+  .resource_card {
+    @include medium {
+      max-width: 30%;
+    }
+  }
+}
