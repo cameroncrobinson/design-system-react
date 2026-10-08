@@ -7,7 +7,7 @@ const preview: Preview = {
     layout: 'padded',
     controls: { matchers: { color: /(background|color)$/i, date: /Date$/i } },
     a11y: { test: 'todo' },
-    options: { storySort: { order: ['Atoms', 'Molecules', 'Organisms'] } }
+    options: { storySort: { order: ['Base', 'Atoms', 'Molecules', 'Organisms', 'Templates', 'Pages'] } }
   }
 };
 export default preview;

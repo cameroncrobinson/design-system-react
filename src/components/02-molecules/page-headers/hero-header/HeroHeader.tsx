@@ -1,0 +1,8 @@
+import { Children, Fragment, useId, useState, useRef, useEffect } from 'react';
+import type { ReactNode, ComponentProps, HTMLAttributes, AnchorHTMLAttributes, ImgHTMLAttributes, SVGProps, VideoHTMLAttributes, FieldsetHTMLAttributes, LabelHTMLAttributes } from 'react';
+import { bem } from '../../../../shared.js';
+import type { Base } from '../../../../shared.js';
+import { Button } from '../../../01-atoms/buttons/Button.js';
+import { Heading } from '../../../01-atoms/text/headings/Heading.js';
+
+export function HeroHeader({ title, subtitle, image, video, captions }: { title: ReactNode; subtitle?: string; image?: string; video?: string; captions?: string }) { const ref = useRef<HTMLVideoElement>(null); const [playing, setPlaying] = useState(false); return <div className={bem('hero-header', [video ? 'video' : 'image'])} style={image ? { backgroundImage: 'url(' + JSON.stringify(image) + ')' } : undefined}>{video && <video ref={ref} muted loop playsInline src={video}>{captions && <track kind="captions" src={captions} />}</video>}<div className={bem('hero-header__container', [video ? 'video' : 'image'], 'flexgrid')}>{video && <div className="hero-header__controls"><Button onClick={async () => { if (playing) { ref.current?.pause(); setPlaying(false); } else { try { await ref.current?.play(); setPlaying(true); } catch { setPlaying(false); } } }}>{playing ? 'Pause video' : 'Play video'}</Button></div>}<div className="hero-header__content"><Heading level={1} className="hero-header__title">{title}</Heading>{subtitle && <p className="hero-header__subheading">{subtitle}</p>}</div></div></div>; }

@@ -1,0 +1,740 @@
+[
+  {
+    "source": "00-base/01-colors/colors.twig",
+    "component": "Colors",
+    "implementation": "src/components/00-base/01-colors/Colors.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "00-base/02-motion/motion.twig",
+    "component": "Motion",
+    "implementation": "src/components/00-base/02-motion/Motion.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "00-base/04-framework/flex-framework.twig",
+    "component": "Flex",
+    "implementation": "src/components/00-base/04-framework/Flex.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "00-base/04-framework/grid-framework.twig",
+    "component": "Grid",
+    "implementation": "src/components/00-base/04-framework/Grid.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/badges/badge.twig",
+    "component": "Badge",
+    "implementation": "src/components/01-atoms/badges/Badge.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/buttons/button.twig",
+    "component": "Button",
+    "implementation": "src/components/01-atoms/buttons/Button.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/date/date.twig",
+    "component": "DateDisplay",
+    "implementation": "src/components/01-atoms/date/DateDisplay.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/forms/_checkboxes.twig",
+    "component": "CheckboxGroup",
+    "implementation": "src/components/01-atoms/forms/checkbox/CheckboxGroup.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "01-atoms/forms/_fieldset.twig",
+    "component": "Fieldset",
+    "implementation": "src/components/01-atoms/forms/Fieldset.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "01-atoms/forms/_form-element.twig",
+    "component": "TextField",
+    "implementation": "src/components/01-atoms/forms/textfields/TextField.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "01-atoms/forms/_form-label.twig",
+    "component": "FormLabel",
+    "implementation": "src/components/01-atoms/forms/label/FormLabel.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "01-atoms/forms/_input.twig",
+    "component": "TextField",
+    "implementation": "src/components/01-atoms/forms/textfields/TextField.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "01-atoms/forms/_multi-value.twig",
+    "component": "MultiValueField",
+    "implementation": "src/components/01-atoms/forms/MultiValueField.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "01-atoms/forms/_radios.twig",
+    "component": "RadioGroup",
+    "implementation": "src/components/01-atoms/forms/radio/RadioGroup.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "01-atoms/forms/_select-element.twig",
+    "component": "TextField",
+    "implementation": "src/components/01-atoms/forms/textfields/TextField.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "01-atoms/forms/_textarea.twig",
+    "component": "Textarea",
+    "implementation": "src/components/01-atoms/forms/Textarea.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "01-atoms/forms/checkbox/_checkbox-item.twig",
+    "component": "CheckboxGroup",
+    "implementation": "src/components/01-atoms/forms/checkbox/CheckboxGroup.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "01-atoms/forms/checkbox/checkbox.twig",
+    "component": "CheckboxGroup",
+    "implementation": "src/components/01-atoms/forms/checkbox/CheckboxGroup.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/forms/label/label.twig",
+    "component": "FormLabel",
+    "implementation": "src/components/01-atoms/forms/label/FormLabel.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/forms/radio/_radio-item.twig",
+    "component": "RadioGroup",
+    "implementation": "src/components/01-atoms/forms/radio/RadioGroup.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "01-atoms/forms/radio/radio.twig",
+    "component": "RadioGroup",
+    "implementation": "src/components/01-atoms/forms/radio/RadioGroup.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/forms/searchinput/searchinput.twig",
+    "component": "SearchInput",
+    "implementation": "src/components/01-atoms/forms/searchinput/SearchInput.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/forms/select/_select-item.twig",
+    "component": "Select",
+    "implementation": "src/components/01-atoms/forms/select/Select.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "01-atoms/forms/select/select.twig",
+    "component": "Select",
+    "implementation": "src/components/01-atoms/forms/select/Select.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/forms/textfields/textfields.twig",
+    "component": "TextField",
+    "implementation": "src/components/01-atoms/forms/textfields/TextField.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/icon/icon.twig",
+    "component": "Icon",
+    "implementation": "src/components/01-atoms/icon/Icon.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/images/icons/_icon.twig",
+    "component": "SvgIcon",
+    "implementation": "src/components/01-atoms/images/icons/SvgIcon.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "01-atoms/images/icons/icons.twig",
+    "component": "SvgIcon",
+    "implementation": "src/components/01-atoms/images/icons/SvgIcon.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/images/image/_image.twig",
+    "component": "Image",
+    "implementation": "src/components/01-atoms/images/image/Image.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "01-atoms/images/image/_picture.twig",
+    "component": "Picture",
+    "implementation": "src/components/01-atoms/images/image/Picture.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "01-atoms/images/image/figure.twig",
+    "component": "Figure",
+    "implementation": "src/components/01-atoms/images/image/Figure.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/images/image/responsive-image.twig",
+    "component": "Image",
+    "implementation": "src/components/01-atoms/images/image/Image.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/links/link/link.twig",
+    "component": "Link",
+    "implementation": "src/components/01-atoms/links/link/Link.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/lists/_list-item-definition.twig",
+    "component": "DefinitionList",
+    "implementation": "src/components/01-atoms/lists/DefinitionList.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "01-atoms/lists/_list-item.twig",
+    "component": "UnorderedList",
+    "implementation": "src/components/01-atoms/lists/UnorderedList.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "01-atoms/lists/dl.twig",
+    "component": "DefinitionList",
+    "implementation": "src/components/01-atoms/lists/DefinitionList.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/lists/ol.twig",
+    "component": "OrderedList",
+    "implementation": "src/components/01-atoms/lists/OrderedList.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/lists/ul.twig",
+    "component": "UnorderedList",
+    "implementation": "src/components/01-atoms/lists/UnorderedList.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/tables/tables.twig",
+    "component": "Table",
+    "implementation": "src/components/01-atoms/tables/Table.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/text/headings/_heading.twig",
+    "component": "Heading",
+    "implementation": "src/components/01-atoms/text/headings/Heading.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "01-atoms/text/text/01-paragraph.twig",
+    "component": "Paragraph",
+    "implementation": "src/components/01-atoms/text/text/Paragraph.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "01-atoms/video/video.twig",
+    "component": "Video",
+    "implementation": "src/components/01-atoms/video/Video.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/accordions/_accordion-item.twig",
+    "component": "Accordion",
+    "implementation": "src/components/02-molecules/accordions/Accordion.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "02-molecules/accordions/accordions.twig",
+    "component": "Accordion",
+    "implementation": "src/components/02-molecules/accordions/Accordion.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/alerts/alerts.twig",
+    "component": "Alert",
+    "implementation": "src/components/02-molecules/alerts/Alert.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/author-event-card/author-event-card.twig",
+    "component": "AuthorEventCard",
+    "implementation": "src/components/02-molecules/author-event-card/AuthorEventCard.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/book/book.twig",
+    "component": "Book",
+    "implementation": "src/components/02-molecules/book/Book.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/call-out-box/call-out-box.twig",
+    "component": "CallOutBox",
+    "implementation": "src/components/02-molecules/call-out-box/CallOutBox.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/card/card.twig",
+    "component": "Card",
+    "implementation": "src/components/02-molecules/card/Card.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/event-card/event-card.twig",
+    "component": "EventCard",
+    "implementation": "src/components/02-molecules/event-card/EventCard.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/horizontal-card/horizontal-card.twig",
+    "component": "HorizontalCard",
+    "implementation": "src/components/02-molecules/horizontal-card/HorizontalCard.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/horizontal-card/library/horizontal-card.twig",
+    "component": "LibraryHorizontalCard",
+    "implementation": "src/components/02-molecules/horizontal-card/library/LibraryHorizontalCard.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/how-do-i/how-do-i.twig",
+    "component": "HowDoI",
+    "implementation": "src/components/02-molecules/how-do-i/HowDoI.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/icon-card/icon-card.twig",
+    "component": "IconCard",
+    "implementation": "src/components/02-molecules/icon-card/IconCard.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/location-map/location-map.twig",
+    "component": "LocationMap",
+    "implementation": "src/components/02-molecules/location-map/LocationMap.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/menus/_menu-item.twig",
+    "component": "Menu",
+    "implementation": "src/components/02-molecules/menus/Menu.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "02-molecules/menus/_menu-list.twig",
+    "component": "Menu",
+    "implementation": "src/components/02-molecules/menus/Menu.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "02-molecules/menus/_menu.twig",
+    "component": "Menu",
+    "implementation": "src/components/02-molecules/menus/Menu.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "02-molecules/menus/breadcrumbs/breadcrumbs.twig",
+    "component": "Breadcrumbs",
+    "implementation": "src/components/02-molecules/menus/breadcrumbs/Breadcrumbs.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/menus/button-group/button-group.twig",
+    "component": "MenuButtonGroup",
+    "implementation": "src/components/02-molecules/menus/button-group/MenuButtonGroup.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/menus/inline/inline-menu.twig",
+    "component": "InlineMenu",
+    "implementation": "src/components/02-molecules/menus/inline/InlineMenu.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/menus/main-menu/main-menu.twig",
+    "component": "MainMenu",
+    "implementation": "src/components/02-molecules/menus/main-menu/MainMenu.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/menus/sidebar-menu/sidebar-menu.twig",
+    "component": "SidebarMenu",
+    "implementation": "src/components/02-molecules/menus/sidebar-menu/SidebarMenu.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/page-headers/hero-header/_hero-video-link.twig",
+    "component": "HeroHeader",
+    "implementation": "src/components/02-molecules/page-headers/hero-header/HeroHeader.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "02-molecules/page-headers/hero-header/hero-header.twig",
+    "component": "HeroHeader",
+    "implementation": "src/components/02-molecules/page-headers/hero-header/HeroHeader.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/page-headers/hero-icon-links/hero-icon-links.twig",
+    "component": "HeroIconLinks",
+    "implementation": "src/components/02-molecules/page-headers/hero-icon-links/HeroIconLinks.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/page-headers/home-header/home-header.twig",
+    "component": "HomeHeader",
+    "implementation": "src/components/02-molecules/page-headers/home-header/HomeHeader.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/page-headers/image-header/image-header.twig",
+    "component": "ImageHeader",
+    "implementation": "src/components/02-molecules/page-headers/image-header/ImageHeader.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/page-headers/page-header/page-header.twig",
+    "component": "PageHeader",
+    "implementation": "src/components/02-molecules/page-headers/page-header/PageHeader.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/page-headers/search-header/search-header.twig",
+    "component": "SearchHeader",
+    "implementation": "src/components/02-molecules/page-headers/search-header/SearchHeader.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/pager/pager.twig",
+    "component": "Pagination",
+    "implementation": "src/components/02-molecules/pager/Pagination.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/photo-gallery/photo-gallery.twig",
+    "component": "PhotoGallery",
+    "implementation": "src/components/02-molecules/photo-gallery/PhotoGallery.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/process-step/process-step.twig",
+    "component": "ProcessSteps",
+    "implementation": "src/components/02-molecules/process-step/ProcessSteps.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/resource-card/resource-card.twig",
+    "component": "ResourceCard",
+    "implementation": "src/components/02-molecules/resource-card/ResourceCard.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/rich-text/_body-example.twig",
+    "component": "RichText",
+    "implementation": "src/components/02-molecules/rich-text/RichText.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "02-molecules/rich-text/rich-text.twig",
+    "component": "RichText",
+    "implementation": "src/components/02-molecules/rich-text/RichText.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/section/section.twig",
+    "component": "Section",
+    "implementation": "src/components/02-molecules/section/Section.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/sidebar-filters/_sidebar-filters-form.twig",
+    "component": "SidebarFilters",
+    "implementation": "src/components/02-molecules/sidebar-filters/SidebarFilters.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "02-molecules/sidebar-filters/sidebar-filters.twig",
+    "component": "SidebarFilters",
+    "implementation": "src/components/02-molecules/sidebar-filters/SidebarFilters.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/simple-banner/simple-banner.twig",
+    "component": "SimpleBanner",
+    "implementation": "src/components/02-molecules/simple-banner/SimpleBanner.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/social-links/_social-link.twig",
+    "component": "SocialLinks",
+    "implementation": "src/components/02-molecules/social-links/SocialLinks.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "02-molecules/social-links/social-links.twig",
+    "component": "SocialLinks",
+    "implementation": "src/components/02-molecules/social-links/SocialLinks.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/stat-card/stat-card.twig",
+    "component": "StatCard",
+    "implementation": "src/components/02-molecules/stat-card/StatCard.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/status/status.twig",
+    "component": "Status",
+    "implementation": "src/components/02-molecules/status/Status.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "02-molecules/tabs/_tab.twig",
+    "component": "Tabs",
+    "implementation": "src/components/02-molecules/tabs/Tabs.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "02-molecules/tabs/tabs.twig",
+    "component": "Tabs",
+    "implementation": "src/components/02-molecules/tabs/Tabs.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "03-organisms/book-river-filtered/filtered-river.twig",
+    "component": "FilteredBookRiver",
+    "implementation": "src/components/03-organisms/book-river-filtered/FilteredBookRiver.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "03-organisms/book-river/book-river.twig",
+    "component": "BookRiver",
+    "implementation": "src/components/03-organisms/book-river/BookRiver.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "03-organisms/button-group/button-group.twig",
+    "component": "ButtonGroup",
+    "implementation": "src/components/03-organisms/button-group/ButtonGroup.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "03-organisms/card-group/card-group.twig",
+    "component": "CardGroup",
+    "implementation": "src/components/03-organisms/card-group/CardGroup.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "03-organisms/card-listing/card-listing.twig",
+    "component": "CardListing",
+    "implementation": "src/components/03-organisms/card-listing/CardListing.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "03-organisms/combo-listing/combo-listing.twig",
+    "component": "ComboListing",
+    "implementation": "src/components/03-organisms/combo-listing/ComboListing.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "03-organisms/event-card-group/event-card-group.twig",
+    "component": "EventCardGroup",
+    "implementation": "src/components/03-organisms/event-card-group/EventCardGroup.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "03-organisms/event-listing/event-listing.twig",
+    "component": "EventListing",
+    "implementation": "src/components/03-organisms/event-listing/EventListing.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "03-organisms/icon-card-group/icon-card-group.twig",
+    "component": "IconCardGroup",
+    "implementation": "src/components/03-organisms/icon-card-group/IconCardGroup.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "03-organisms/site/site-footer/_site-footer-branding.twig",
+    "component": "SiteFooter",
+    "implementation": "src/components/03-organisms/site/site-footer/SiteFooter.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "03-organisms/site/site-footer/_site-footer-powered-by.twig",
+    "component": "SiteFooter",
+    "implementation": "src/components/03-organisms/site/site-footer/SiteFooter.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "03-organisms/site/site-footer/site-footer.twig",
+    "component": "SiteFooter",
+    "implementation": "src/components/03-organisms/site/site-footer/SiteFooter.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "03-organisms/site/site-header/_site-header-branding.twig",
+    "component": "SiteHeader",
+    "implementation": "src/components/03-organisms/site/site-header/SiteHeader.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "03-organisms/site/site-header/_site-header-top.twig",
+    "component": "SiteHeader",
+    "implementation": "src/components/03-organisms/site/site-header/SiteHeader.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "03-organisms/site/site-header/_site-header-translate.twig",
+    "component": "SiteHeader",
+    "implementation": "src/components/03-organisms/site/site-header/SiteHeader.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "03-organisms/site/site-header/site-header.twig",
+    "component": "SiteHeader",
+    "implementation": "src/components/03-organisms/site/site-header/SiteHeader.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "03-organisms/stat-card-group/stat-card-group.twig",
+    "component": "StatCardGroup",
+    "implementation": "src/components/03-organisms/stat-card-group/StatCardGroup.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "04-templates/_default.twig",
+    "component": "DefaultLayout",
+    "implementation": "src/components/04-templates/DefaultLayout.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "04-templates/full-width.twig",
+    "component": "FullWidth",
+    "implementation": "src/components/04-templates/FullWidth.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "04-templates/placeholder/place-holder.twig",
+    "component": "Placeholder",
+    "implementation": "src/components/04-templates/placeholder/Placeholder.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "04-templates/with-sidebar.twig",
+    "component": "WithSidebar",
+    "implementation": "src/components/04-templates/WithSidebar.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "05-pages/article/article.twig",
+    "component": "ArticlePage",
+    "implementation": "src/components/05-pages/article/ArticlePage.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "05-pages/basic-page/_section-events.twig",
+    "component": "BasicPage",
+    "implementation": "src/components/05-pages/basic-page/BasicPage.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "05-pages/basic-page/_section-news.twig",
+    "component": "BasicPage",
+    "implementation": "src/components/05-pages/basic-page/BasicPage.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "05-pages/basic-page/basic-page.twig",
+    "component": "BasicPage",
+    "implementation": "src/components/05-pages/basic-page/BasicPage.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "05-pages/department/department.twig",
+    "component": "DepartmentPage",
+    "implementation": "src/components/05-pages/department/DepartmentPage.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "05-pages/event-detail/_section-location.twig",
+    "component": "EventDetailPage",
+    "implementation": "src/components/05-pages/event-detail/EventDetailPage.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "05-pages/event-detail/event-detail.twig",
+    "component": "EventDetailPage",
+    "implementation": "src/components/05-pages/event-detail/EventDetailPage.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "05-pages/landing-pages/_section-cta.twig",
+    "component": "LandingPage",
+    "implementation": "src/components/05-pages/landing-pages/LandingPage.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "05-pages/landing-pages/_section-featured-events.twig",
+    "component": "LandingPage",
+    "implementation": "src/components/05-pages/landing-pages/LandingPage.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "05-pages/landing-pages/_section-featured-services.twig",
+    "component": "LandingPage",
+    "implementation": "src/components/05-pages/landing-pages/LandingPage.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "05-pages/landing-pages/_section-i-want-to.twig",
+    "component": "LandingPage",
+    "implementation": "src/components/05-pages/landing-pages/LandingPage.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "05-pages/landing-pages/_section-icon-group.twig",
+    "component": "LandingPage",
+    "implementation": "src/components/05-pages/landing-pages/LandingPage.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "05-pages/landing-pages/_section-news.twig",
+    "component": "LandingPage",
+    "implementation": "src/components/05-pages/landing-pages/LandingPage.tsx",
+    "kind": "Composed partial"
+  },
+  {
+    "source": "05-pages/landing-pages/home.twig",
+    "component": "HomePage",
+    "implementation": "src/components/05-pages/landing-pages/HomePage.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "05-pages/landing-pages/landing-page.twig",
+    "component": "LandingPage",
+    "implementation": "src/components/05-pages/landing-pages/LandingPage.tsx",
+    "kind": "Component or composition"
+  },
+  {
+    "source": "05-pages/search-results/search-results.twig",
+    "component": "SearchResultsPage",
+    "implementation": "src/components/05-pages/search-results/SearchResultsPage.tsx",
+    "kind": "Component or composition"
+  }
+]
