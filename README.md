@@ -1,4 +1,4 @@
-# Design System for React
+# Design System for React (WIP)
 
 A self-contained TypeScript React package. The build compiles the colocated `src/components/` Sass sources into `dist/styles.css`, preserving the original colors, type, spacing, breakpoints, and BEM classes. React and React DOM are peer dependencies and are not bundled. This project can be built without the original Drupal repository.
 
