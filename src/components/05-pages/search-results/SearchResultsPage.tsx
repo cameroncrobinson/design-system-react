@@ -1,7 +1,7 @@
 import { Children, Fragment, useId, useState, useRef, useEffect } from 'react';
 import type { ReactNode, ComponentProps, HTMLAttributes, AnchorHTMLAttributes, ImgHTMLAttributes, SVGProps, VideoHTMLAttributes, FieldsetHTMLAttributes, LabelHTMLAttributes } from 'react';
-import { bem } from '../../../shared.js';
-import type { Base } from '../../../shared.js';
+import { bem } from '../../../shared.tsx';
+import type { Base } from '../../../shared.tsx';
 import { Pagination } from '../../02-molecules/pager/Pagination.js';
 import { SidebarFilters } from '../../02-molecules/sidebar-filters/SidebarFilters.js';
 import { SearchHeader } from '../../02-molecules/page-headers/search-header/SearchHeader.js';

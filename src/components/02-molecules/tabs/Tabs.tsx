@@ -1,8 +1,8 @@
 import { Children, useId, useRef, useState } from 'react';
 import type { ReactNode, HTMLAttributes, ButtonHTMLAttributes, AnchorHTMLAttributes, InputHTMLAttributes, SelectHTMLAttributes, TextareaHTMLAttributes } from 'react';
 
-import { bem, FieldWrapper, describedBy } from '../../../shared.js';
-import type { Base, Field } from '../../../shared.js';
+import { bem, FieldWrapper, describedBy } from '../../../shared.tsx';
+import type { Base, Field } from '../../../shared.tsx';
 import type { AccordionItem } from '../accordions/Accordion.js';
 export function Tabs({ items, label, className }: { items: AccordionItem[]; label: string; className?: string }) {
   const prefix = useId(); const [active, setActive] = useState(0); const refs = useRef<(HTMLButtonElement|null)[]>([]);

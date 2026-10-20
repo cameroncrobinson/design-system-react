@@ -9,8 +9,8 @@ import type {
   TextareaHTMLAttributes,
 } from 'react';
 
-import { bem, FieldWrapper, describedBy } from '../../../shared.js';
-import type { Base, Field } from '../../../shared.js';
+import { bem, FieldWrapper, describedBy } from '../../../shared.tsx';
+import type { Base, Field } from '../../../shared.tsx';
 export function Badge({
   children,
   icon,

@@ -1,8 +1,8 @@
 import { Children, useId, useRef, useState } from 'react';
 import type { ReactNode, HTMLAttributes, ButtonHTMLAttributes, AnchorHTMLAttributes, InputHTMLAttributes, SelectHTMLAttributes, TextareaHTMLAttributes } from 'react';
 
-import { bem, FieldWrapper, describedBy } from '../../../shared.js';
-import type { Base, Field } from '../../../shared.js';
+import { bem, FieldWrapper, describedBy } from '../../../shared.tsx';
+import type { Base, Field } from '../../../shared.tsx';
 import { Heading } from '../../01-atoms/text/headings/Heading.js';
 export function Alert({ title, children, level = 'informational', dismissible, onDismiss, icon, className }: { title: ReactNode; children?: ReactNode; level?: 'informational'|'non-emergency'|'emergency'; dismissible?: boolean; onDismiss?: () => void; icon?: ReactNode; className?: string }) {
   const [dismissed, setDismissed] = useState(false);

@@ -1,7 +1,7 @@
 import { Children, Fragment, useId, useState, useRef, useEffect } from 'react';
 import type { ReactNode, ComponentProps, HTMLAttributes, AnchorHTMLAttributes, ImgHTMLAttributes, SVGProps, VideoHTMLAttributes, FieldsetHTMLAttributes, LabelHTMLAttributes } from 'react';
-import { bem } from '../../../../shared.js';
-import type { Base } from '../../../../shared.js';
+import { bem } from '../../../../shared.tsx';
+import type { Base } from '../../../../shared.tsx';
 import { Heading } from '../../../01-atoms/text/headings/Heading.js';
 import { Figure } from '../../../01-atoms/images/image/Figure.js';
 import { Menu } from '../../menus/Menu.js';

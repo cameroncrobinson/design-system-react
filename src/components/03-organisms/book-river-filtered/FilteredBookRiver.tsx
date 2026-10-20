@@ -1,7 +1,7 @@
 import { Children, Fragment, useId, useState, useRef, useEffect } from 'react';
 import type { ReactNode, ComponentProps, HTMLAttributes, AnchorHTMLAttributes, ImgHTMLAttributes, SVGProps, VideoHTMLAttributes, FieldsetHTMLAttributes, LabelHTMLAttributes } from 'react';
-import { bem } from '../../../shared.js';
-import type { Base } from '../../../shared.js';
+import { bem } from '../../../shared.tsx';
+import type { Base } from '../../../shared.tsx';
 import { Tabs } from '../../02-molecules/tabs/Tabs.js';
 import { Section } from '../../02-molecules/section/Section.js';
 import { Book } from '../../02-molecules/book/Book.js';

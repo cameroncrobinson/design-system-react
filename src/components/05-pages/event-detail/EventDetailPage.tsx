@@ -1,7 +1,7 @@
 import { Children, Fragment, useId, useState, useRef, useEffect } from 'react';
 import type { ReactNode, ComponentProps, HTMLAttributes, AnchorHTMLAttributes, ImgHTMLAttributes, SVGProps, VideoHTMLAttributes, FieldsetHTMLAttributes, LabelHTMLAttributes } from 'react';
-import { bem } from '../../../shared.js';
-import type { Base } from '../../../shared.js';
+import { bem } from '../../../shared.tsx';
+import type { Base } from '../../../shared.tsx';
 import { PageHeader } from '../../02-molecules/page-headers/page-header/PageHeader.js';
 import { EventCard } from '../../02-molecules/event-card/EventCard.js';
 import { RichText } from '../../02-molecules/rich-text/RichText.js';

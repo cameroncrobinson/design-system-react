@@ -1,8 +1,8 @@
 import { Children, useId, useRef, useState } from 'react';
 import type { ReactNode, HTMLAttributes, ButtonHTMLAttributes, AnchorHTMLAttributes, InputHTMLAttributes, SelectHTMLAttributes, TextareaHTMLAttributes } from 'react';
 
-import { bem, FieldWrapper, describedBy } from '../../../shared.js';
-import type { Base, Field } from '../../../shared.js';
+import { bem, FieldWrapper, describedBy } from '../../../shared.tsx';
+import type { Base, Field } from '../../../shared.tsx';
 export type ButtonProps = Base & { children: ReactNode; icon?: ReactNode; cta?: boolean } &
   ((ButtonHTMLAttributes<HTMLButtonElement> & { href?: never }) | (AnchorHTMLAttributes<HTMLAnchorElement> & { href: string; disabled?: boolean }));
 export function Button({ children, icon, cta, modifiers, className, ...props }: ButtonProps) {

@@ -1,8 +1,8 @@
 import { Children, useId, useRef, useState } from 'react';
 import type { ReactNode, HTMLAttributes, ButtonHTMLAttributes, AnchorHTMLAttributes, InputHTMLAttributes, SelectHTMLAttributes, TextareaHTMLAttributes } from 'react';
 
-import { bem, FieldWrapper, describedBy } from '../../../shared.js';
-import type { Base, Field } from '../../../shared.js';
+import { bem, FieldWrapper, describedBy } from '../../../shared.tsx';
+import type { Base, Field } from '../../../shared.tsx';
 export function Pagination({ page, pageCount, onPageChange, label = 'Pagination' }: { page: number; pageCount: number; onPageChange: (page: number) => void; label?: string }) {
   if (pageCount < 1) return null;
   const pages = Array.from({ length: pageCount }, (_, i) => i + 1).filter(p => p === 1 || p === pageCount || Math.abs(p - page) <= 2);
