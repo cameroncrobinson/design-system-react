@@ -60,10 +60,11 @@ $button-colors: (
 // The button-base mixin contains styles that apply to all buttons
 // regardless of color or size.
 @mixin button-base {
+  display: flex;
+  align-items: center;
   border-radius: 3px;
   border: none;
   cursor: pointer;
-  display: inline-block;
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1;
