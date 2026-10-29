@@ -74,9 +74,7 @@ export { EventCardGroup } from './components/03-organisms/event-card-group/Event
 export { StatCardGroup } from './components/03-organisms/stat-card-group/StatCardGroup.js';
 export { CardListing } from './components/03-organisms/card-listing/CardListing.js';
 export { EventListing } from './components/03-organisms/event-listing/EventListing.js';
-export { ComboListing } from './components/03-organisms/combo-listing/ComboListing.js';
-export { BookRiver } from './components/03-organisms/book-river/BookRiver.js';
-export { FilteredBookRiver } from './components/03-organisms/book-river-filtered/FilteredBookRiver.js';
+export { ComboListing } from './components/03-organisms/combo-listing/ComboListing.js';;
 export { SiteHeader } from './components/03-organisms/site/site-header/SiteHeader.js';
 export { SiteFooter } from './components/03-organisms/site/site-footer/SiteFooter.js';
 export { DefaultLayout } from './components/04-templates/DefaultLayout.js';
